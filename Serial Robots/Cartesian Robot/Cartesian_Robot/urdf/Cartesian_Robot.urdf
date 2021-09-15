@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Cartesian_Robot">
+  <link
+    name="Base">
+    <inertial>
+      <origin
+        xyz="2.5706818405234 -3.94946047249663 2.87742454863378"
+        rpy="0 0 0" />
+      <mass
+        value="385.500000000001" />
+      <inertia
+        ixx="1178.53282709144"
+        ixy="2.0028446493884E-14"
+        ixz="6.16522004998815E-15"
+        iyy="404.13688959144"
+        iyz="-7.63592569764657E-14"
+        izz="775.786562500002" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cartesian_Robot/meshes/Base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cartesian_Robot/meshes/Base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_1">
+    <inertial>
+      <origin
+        xyz="-2.22044604925031E-15 0.263321167883211 0.0750000000000002"
+        rpy="0 0 0" />
+      <mass
+        value="102.75" />
+      <inertia
+        ixx="0.571297901459852"
+        ixy="-1.76289294775025E-14"
+        ixz="-2.70564266815804E-15"
+        iyy="284.56203125"
+        iyz="5.74642161418218E-17"
+        izz="284.793016651459" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cartesian_Robot/meshes/Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cartesian_Robot/meshes/Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="prismatic">
+    <origin
+      xyz="2.5706818405234 -5.28710486307985 3.90553738910071"
+      rpy="1.5707963267949 0 0" />
+    <parent
+      link="Base" />
+    <child
+      link="Link_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_2">
+    <inertial>
+      <origin
+        xyz="0.12499999999985 0.00242718446602019 0.0189320388349534"
+        rpy="0 0 0" />
+      <mass
+        value="12.875" />
+      <inertia
+        ixx="0.26254904935275"
+        ixy="2.68904390916601E-18"
+        ixz="-1.07966052367979E-15"
+        iyy="0.308562398867313"
+        iyz="0.00059162621359225"
+        izz="0.0993512338187702" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cartesian_Robot/meshes/Link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cartesian_Robot/meshes/Link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="prismatic">
+    <origin
+      xyz="-2.17867598218295 0.324999999999999 0.0749999999999984"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="Link_1" />
+    <child
+      link="Link_2" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_3">
+    <inertial>
+      <origin
+        xyz="0.199999999999964 -1.38987303629096 -0.124999999999946"
+        rpy="0 0 0" />
+      <mass
+        value="53.6124336293858" />
+      <inertia
+        ixx="41.9953815671922"
+        ixy="-2.91912097157699E-13"
+        ixz="3.98691129083209E-16"
+        iyy="0.213530289828399"
+        iyz="-2.92191849822614E-13"
+        izz="42.0328815671922" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cartesian_Robot/meshes/Link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cartesian_Robot/meshes/Link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="3.14159265358979 1.5707963267949 0" />
+    <parent
+      link="Link_2" />
+    <child
+      link="Link_3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="End_Effector">
+    <inertial>
+      <origin
+        xyz="0 0.00500000000012246 1.1385337117531E-13"
+        rpy="0 0 0" />
+      <mass
+        value="0.162433629385637" />
+      <inertia
+        ixx="0.000256081861110283"
+        ixy="-4.43721793868471E-22"
+        ixz="-4.88036561406277E-20"
+        iyy="0.000634456495064134"
+        iyz="-3.05913944980143E-22"
+        izz="0.000381081861110278" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cartesian_Robot/meshes/End_Effector.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.501960784313725 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cartesian_Robot/meshes/End_Effector.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="F1"
+    type="fixed">
+    <origin
+      xyz="0.2 0.152477886930783 -0.124999999999944"
+      rpy="0 0 3.14159265358979" />
+    <parent
+      link="Link_3" />
+    <child
+      link="End_Effector" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

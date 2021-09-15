@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Cylindrical_Robot">
+  <link
+    name="Base">
+    <inertial>
+      <origin
+        xyz="1.51788304147971E-15 3.07046055247895E-16 0.0971649484536089"
+        rpy="0 0 0" />
+      <mass
+        value="38.0918109247757" />
+      <inertia
+        ixx="0.998007283384442"
+        ixy="-7.07767178198537E-16"
+        ixz="2.96384243302059E-15"
+        iyy="0.998007283384443"
+        iyz="8.11507210601025E-16"
+        izz="1.43441270864657" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cylindrical_Robot/meshes/Base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.96078431372549 0.792156862745098 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cylindrical_Robot/meshes/Base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_1">
+    <inertial>
+      <origin
+        xyz="-1.16746889933239E-15 0.00815665838358236 1.12791470725033"
+        rpy="0 0 0" />
+      <mass
+        value="45.9361938571609" />
+      <inertia
+        ixx="22.6970338352878"
+        ixy="4.44089209850063E-16"
+        ixz="-3.74938779646488E-17"
+        iyy="22.7125900196918"
+        iyz="-0.101633918196419"
+        izz="0.21814087740139" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cylindrical_Robot/meshes/Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cylindrical_Robot/meshes/Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J1"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Base" />
+    <child
+      link="Link_1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Cap_1">
+    <inertial>
+      <origin
+        xyz="2.25514051876985E-17 -0.00143637454577911 2.425"
+        rpy="0 0 0" />
+      <mass
+        value="1.0935840734641" />
+      <inertia
+        ixx="0.00225562354894147"
+        ixy="-4.87890977618477E-19"
+        ixz="-5.60363852344969E-19"
+        iyy="0.00225787980080188"
+        iyz="-8.55000534598758E-19"
+        izz="0.00405784331913331" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cylindrical_Robot/meshes/Cap_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cylindrical_Robot/meshes/Cap_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="F1"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Link_1" />
+    <child
+      link="Cap_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Link_2">
+    <inertial>
+      <origin
+        xyz="-1.13797860024079E-15 -0.1166666397679 5.13766251764025E-11"
+        rpy="0 0 0" />
+      <mass
+        value="3.37499727063957" />
+      <inertia
+        ixx="0.0183593719803702"
+        ixy="-6.50521303491303E-19"
+        ixz="-6.59824731221494E-19"
+        iyy="0.0126562448824345"
+        iyz="5.7674549433612E-12"
+        izz="0.0163281168628341" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cylindrical_Robot/meshes/Link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cylindrical_Robot/meshes/Link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J2"
+    type="prismatic">
+    <origin
+      xyz="0 0 0.475"
+      rpy="0 0 0" />
+    <parent
+      link="Link_1" />
+    <child
+      link="Link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_3">
+    <inertial>
+      <origin
+        xyz="0.85149437697372 -0.224121856849528 1.60982338570648E-15"
+        rpy="0 0 0" />
+      <mass
+        value="26.8687168146928" />
+      <inertia
+        ixx="0.0697509981348235"
+        ixy="0.0227187464895352"
+        ixz="-1.15010053899446E-14"
+        iyy="10.2875221281938"
+        iyz="-8.7730852225903E-18"
+        izz="10.2836069397478" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cylindrical_Robot/meshes/Link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cylindrical_Robot/meshes/Link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="J3"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Link_2" />
+    <child
+      link="Link_3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="End_Effector">
+    <inertial>
+      <origin
+        xyz="-0.0249999999999995 -0.198563625454215 4.49640324973188E-15"
+        rpy="0 0 0" />
+      <mass
+        value="1.0935840734641" />
+      <inertia
+        ixx="0.0040578433191333"
+        ixy="8.67361737988404E-19"
+        ixz="-1.64025199478762E-18"
+        iyy="0.00225787980080188"
+        iyz="1.10281598429243E-18"
+        izz="0.00225562354894146" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cylindrical_Robot/meshes/End_Effector.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Cylindrical_Robot/meshes/End_Effector.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="F2"
+    type="fixed">
+    <origin
+      xyz="1.975 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="Link_3" />
+    <child
+      link="End_Effector" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
